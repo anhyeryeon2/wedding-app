@@ -10,6 +10,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "classnames": "^2.3.2",
+    "json-server": "^1.0.0-beta.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -22,7 +23,8 @@
     "build": "craco build",
     "eject": "craco eject",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\""
+    "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+    "json-server": "json-server --watch db.json --port=8888"
   },
   "browserslist": {
     "production": [
