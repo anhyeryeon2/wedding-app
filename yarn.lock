@@ -1856,6 +1856,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@date-fns/tz@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@date-fns/tz@npm:1.1.2"
+  checksum: 4b2b3d3f062e456c51d5dec5332266c27d9a136352f75fdfd5769be25bcd02ababd9b5e809ae3f9c5e8c3fad1831d11a79a03c87b0f566a48bf9fec084df7665
+  languageName: node
+  linkType: hard
+
 "@eslint-community/eslint-utils@npm:^4.2.0":
   version: 4.4.0
   resolution: "@eslint-community/eslint-utils@npm:4.4.0"
@@ -10312,6 +10319,7 @@ __metadata:
     json-server: ^1.0.0-beta.3
     prettier: ^3.0.1
     react: ^18.2.0
+    react-day-picker: ^9.1.4
     react-dom: ^18.2.0
     react-scripts: 5.0.1
     sass: ^1.64.2
@@ -11523,6 +11531,18 @@ __metadata:
     regenerator-runtime: ^0.13.9
     whatwg-fetch: ^3.6.2
   checksum: 1bb031080af15397d6eb9c69a0c2e93799991f7197a086e4409ba719398f1256b542a3d6c9a34673d516c684eef3e8226c99b335982593851f58f65f6e43571b
+  languageName: node
+  linkType: hard
+
+"react-day-picker@npm:^9.1.4":
+  version: 9.1.4
+  resolution: "react-day-picker@npm:9.1.4"
+  dependencies:
+    "@date-fns/tz": ^1.1.2
+    date-fns: ^4.1.0
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 7dbef863032dd01d5514f15b75b3ef583bd29c34ebfdf6a6900225d50df0325c34d879cfc77fe97778b62afa250e5a51c7be210416f5a679317a656c305a1dee
   languageName: node
   linkType: hard
 
