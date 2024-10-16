@@ -33,4 +33,5 @@ export interface Wedding {
   export interface Account {
     bankName: string
     accountNumber: string
+    kakaopayLink?:string
   }
