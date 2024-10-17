@@ -12,7 +12,7 @@ import Intro from './components/sections/Intro'
 import Invitation from './components/sections/Invitation'
 import Calendar from './components/sections/Calendar'
 import Contact from './components/sections/Contact'
-
+import Modal from './components/shared/Modal'
 const cx = classNames.bind(styles)
 
 function App() {
@@ -76,12 +76,27 @@ function App() {
         date={date}
         message={intro}
       />
-      <Invitation message={invitation}/>
+      <Invitation message={invitation} />
       <ImageGallery images={galleryImages} />
 
-      <Calendar date={date}/>
-      <Contact groom={groom} bride={bride}/>
-      {/* {JSON.stringify(wedding)} */}
+      <Calendar date={date} />
+      <Contact groom={groom} bride={bride} />
+
+      {/* <Modal
+        open={true}
+        title="현재 참석자"
+        body={
+          <div>
+            <input />
+          </div>
+        }
+        onLeftButtonClick={() => {
+          console.log('클릭')
+        }}
+        onRightButtonClick={() => {
+          console.log('클릭')
+        }}
+      /> */}
     </div>
   )
 }
