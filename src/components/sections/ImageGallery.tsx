@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind'
 import { useState } from 'react'
-
+import { motion } from 'framer-motion';
 import Section from '@shared/Section'
 import styles from './ImageGallery.module.scss'
 
@@ -23,6 +23,7 @@ function ImageGallery({ images }: { images: string[] }) {
 
   return (
     <>
+    
       <Section title="사진첩">
         <ul className={cx('wrap-images')}>
           {images.map((src, idx) => (
@@ -39,12 +40,21 @@ function ImageGallery({ images }: { images: string[] }) {
           ))}
         </ul>
       </Section>
-      <ImageViewer
+      <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{
+                ease: "easeInOut",
+                duration: 2,
+                y: { duration: 1 },
+            }}
+        ><ImageViewer
         images={images}
         open={open}
         selectedIdx={selectedIdx}
         onClose={handleClose}
-      />
+      /></motion.div>
     </>
   )
 }

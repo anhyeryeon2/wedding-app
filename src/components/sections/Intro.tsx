@@ -4,7 +4,7 @@ import styles from './Intro.module.scss'
 import {parseISO,format} from 'date-fns'
 import {ko} from 'date-fns/locale'
 import Text from '../shared/Text'
-
+import { motion } from 'framer-motion';
 const cx = classNames.bind(styles)
 
 interface IntroProps{
@@ -17,6 +17,16 @@ interface IntroProps{
 function Intro({groomName,brideName,date,locationName,message}:IntroProps) {
  
   return (
+    <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{
+                ease: "easeInOut",
+                duration: 2,
+                y: { duration: 1 },
+            }}
+        >
     <Section className={cx('container')}>
         <div className={cx('wrap-persons')}>
 
@@ -37,6 +47,7 @@ function Intro({groomName,brideName,date,locationName,message}:IntroProps) {
            
         </div>
     </Section>
+    </motion.div>
   )
 }
 function IconHeart({ className }: { className: string }) {
